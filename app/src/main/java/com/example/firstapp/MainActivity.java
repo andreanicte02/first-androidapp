@@ -3,6 +3,7 @@ package com.example.firstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
     EditText editTextNumber1;
     EditText editTextNumber2;
     Spinner spinner;
@@ -60,17 +62,32 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        btn.setOnClickListener(clickListener);
+
         textResult = findViewById(R.id.textViewResultado);
 
 
     }
 
-    //de esta manera se pude ejecutar gracias a que acepta un parametro view
 
+
+    //log.d sirve para escribir para consola
+    //servira mas adlenata para debuggear a la brava
     public void operar(){
         String cad ="";
-        
 
+        if(spinner.getSelectedItem().toString().equals("suma")){
+            cad=sumar();
+        }else if(spinner.getSelectedItem().toString().equals("resta")){
+            cad=restar();
+        }else if(spinner.getSelectedItem().toString().equals("mult")){
+            cad=mult();
+        }
+
+        textResult.setText(cad);
+
+
+        Log.d(TAG, "operar: "+ spinner.getSelectedItem().toString());
 
     }
 

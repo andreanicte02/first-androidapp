@@ -56,7 +56,6 @@
         android:id="@+id/btn"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:onClick="operar"
         android:text="@string/strBtnOperar"
         app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
         app:layout_constraintEnd_toEndOf="parent"
