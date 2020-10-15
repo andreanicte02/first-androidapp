@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -20,14 +22,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    EditText editTextNumber1;
-    EditText editTextNumber2;
-    Spinner spinner;
-
-
-
-    Button btn;
     TextView textResult;
+    ListView listView;
 
     //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
     //la primero que pasa cuando se ejecuta o abre una activiad es este metodo es este on create
@@ -38,94 +34,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //enlazar los componentes
-        editTextNumber1 = findViewById(R.id.editTextNumber1);
-        editTextNumber2 = findViewById(R.id.editTextNumber2);
-        spinner = findViewById(R.id.sipnaso);
-        btn = findViewById(R.id.btn);
+        textResult = findViewById(R.id.textResult);
+        listView = findViewById(R.id.listView);
+
 
         List<String> opciones = new ArrayList<>();
-        opciones.add("suma");
-        opciones.add("resta");
-        opciones.add("mult");
+        opciones.add("id1");
+        opciones.add("id2");
+        opciones.add("id2");
+        opciones.add("id3");
+        opciones.add("id4");
+        opciones.add("id5");
+        opciones.add("id6");
+        opciones.add("id7");
+        opciones.add("id8");
 
-        //creando un adaptador de string
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item,opciones);
+        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,opciones);
 
-        spinner.setAdapter(adapter);
+        listView.setAdapter(adapter);
 
-        //otra forma de agregar acciones a los botones
-        View.OnClickListener clickListener = new View.OnClickListener() {
+        //on click de un item en un listview
+        AdapterView.OnItemClickListener itemClikc = new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                operar();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                textResult.setText(opciones.get(position) + "hola");
             }
         };
 
-        btn.setOnClickListener(clickListener);
+        listView.setOnItemClickListener(itemClikc);
 
-        textResult = findViewById(R.id.textViewResultado);
+
+
 
 
     }
 
-
-
-    //log.d sirve para escribir para consola
-    //servira mas adlenata para debuggear a la brava
-    public void operar(){
-        String cad ="";
-
-        if(spinner.getSelectedItem().toString().equals("suma")){
-            cad=sumar();
-        }else if(spinner.getSelectedItem().toString().equals("resta")){
-            cad=restar();
-        }else if(spinner.getSelectedItem().toString().equals("mult")){
-            cad=mult();
-        }
-
-        textResult.setText(cad);
-
-
-        Log.d(TAG, "operar: "+ spinner.getSelectedItem().toString());
-
-    }
-
-    private String sumar(){
-
-        int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
-        int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
-
-        return numero1+numero2 + "\n";
-
-    }
-
-    private String restar(){
-
-        int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
-        int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
-
-        return numero1-numero2 + "\n";
-
-    }
-
-    private String mult(){
-
-        int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
-        int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
-
-        return numero1*numero2 + "\n";
-
-    }
-
-    private void div(){
-
-        int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
-        int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
-
-        textResult.setText( numero1/numero2 + "");
-
-    }
 
 
 

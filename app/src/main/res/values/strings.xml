@@ -15,4 +15,5 @@
     <string name="strCheckMult">Mult</string>
     <string name="strBtnOperar">Button</string>
     <string name="strTextRestultado">Resultado</string>
+    <string name="strTextResult">TextView</string>
 </resources>

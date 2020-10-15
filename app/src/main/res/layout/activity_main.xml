@@ -8,78 +8,23 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textViewNumber1"
-        android:layout_width="match_parent"
+        android:id="@+id/textResult"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:layout_marginBottom="278dp"
-        android:text="@string/txtLabelNumber1"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
+        android:layout_marginTop="26dp"
+        android:text="@string/strTextResult"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextNumber1"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumber1" />
-
-    <TextView
-        android:id="@+id/textViewNumber2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="@string/txtLabelNumber2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumber2" />
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/strBtnOperar"
-        app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/sipnaso"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNumber1" />
-
-    <TextView
-        android:id="@+id/textViewResultado"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="92dp"
-        android:text="@string/strTextRestultado"
+        android:layout_height="458dp"
+        android:layout_marginBottom="43dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn" />
-
-    <Spinner
-        android:id="@+id/sipnaso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult" />
 </androidx.constraintlayout.widget.ConstraintLayout>
