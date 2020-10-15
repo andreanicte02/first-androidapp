@@ -20,16 +20,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //indica la actividad que se va mostrar
         setContentView(R.layout.activity_main);
 
         editTextNumber1 = findViewById(R.id.editTextNumber1);
         editTextNumber2 = findViewById(R.id.editTextNumber2);
 
+        //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
         btn = findViewById(R.id.btn);
         textResult = findViewById(R.id.textViewResultado);
     }
 
-    //de esta manera se pude ejecutar
+    //de esta manera se pude ejecutar gracias a que acepta un parametro view
     public void sumar(View v){
 
         int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
