@@ -4,4 +4,10 @@
     <string name="txtLabelNumber2">write some number 2</string>
     <string name="txtBtn1">sumar</string>
     <string name="txtResultado">Resultado</string>
+    <string name="strResultado">Resultado</string>
+    <string name="strBtnCalcular">Calcular</string>
+    <string name="strRadioDiv">Division</string>
+    <string name="strRadioButMult">Multiplicacion</string>
+    <string name="strRadioResta">Resta</string>
+    <string name="strRadioSuma">Suma</string>
 </resources>

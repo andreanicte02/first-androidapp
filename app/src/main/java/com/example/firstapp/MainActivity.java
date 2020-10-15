@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         editTextNumber2 = findViewById(R.id.editTextNumber2);
 
         //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
-        btn = findViewById(R.id.btn);
-        textResult = findViewById(R.id.textViewResultado);
+        //btn = findViewById(R.id.btn);
+        //textResult = findViewById(R.id.textViewResultado);
     }
 
     //de esta manera se pude ejecutar gracias a que acepta un parametro view
