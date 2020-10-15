@@ -10,4 +10,9 @@
     <string name="strRadioButMult">Multiplicacion</string>
     <string name="strRadioResta">Resta</string>
     <string name="strRadioSuma">Suma</string>
+    <string name="strCheckSuma">Suma</string>
+    <string name="strCheckResta">Resta</string>
+    <string name="strCheckMult">Mult</string>
+    <string name="strBtnOperar">Button</string>
+    <string name="strTextRestultado">Resultado</string>
 </resources>

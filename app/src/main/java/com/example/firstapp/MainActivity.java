@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -13,10 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editTextNumber1;
     EditText editTextNumber2;
-    RadioButton r1;
-    RadioButton r2;
-    RadioButton r3;
-    RadioButton r4;
+    CheckBox r1;
+    CheckBox r2;
+    CheckBox r3;
+
 
 
 
@@ -38,61 +39,60 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         textResult = findViewById(R.id.textViewResultado);
 
-        r1 = findViewById(R.id.radioButton);
-        r2 = findViewById(R.id.radioButton2);
-        r3 = findViewById(R.id.radioButton3);
-        r4 = findViewById(R.id.radioButton4);
+        r1 = findViewById(R.id.r1);
+        r2 = findViewById(R.id.r2);
+        r3 = findViewById(R.id.r3);
+
 
     }
 
     //de esta manera se pude ejecutar gracias a que acepta un parametro view
 
     public void operar(View v){
+        String cad ="";
         if(r1.isChecked()){
-            sumar();
-            return;
+            cad+=sumar();
+
         }
 
         if(r2.isChecked()){
-            restar();
-            return;
+            cad+=restar();
+
         }
 
         if(r3.isChecked()){
-            mult();
-            return;
+            cad+=mult();
+
         }
+        textResult.setText(cad);
 
-        if(r4.isChecked()){
-            div();
-            return;
-        }
+
     }
 
-    private void sumar(){
+    private String sumar(){
 
         int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
         int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
 
-        textResult.setText( numero1+numero2 + "");
+        return numero1+numero2 + "\n";
 
     }
 
-    private void restar(){
+    private String restar(){
 
         int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
         int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
 
-        textResult.setText( numero1-numero2 + "");
+        return numero1-numero2 + "\n";
 
     }
 
-    private void mult(){
+    private String mult(){
 
         int numero1 = Integer.parseInt(editTextNumber1.getText().toString());
         int numero2 = Integer.parseInt(editTextNumber2.getText().toString());
 
-        textResult.setText( numero1*numero2 + "");
+        return numero1*numero2 + "\n";
 
     }
 
