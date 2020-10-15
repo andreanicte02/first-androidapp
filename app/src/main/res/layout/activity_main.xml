@@ -52,35 +52,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumber2" />
 
-    <CheckBox
-        android:id="@+id/r1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/strCheckSuma"
-        app:layout_constraintEnd_toStartOf="@+id/r2"
-        app:layout_constraintHorizontal_bias="0.298"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
-
-    <CheckBox
-        android:id="@+id/r2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:text="@string/strCheckResta"
-        app:layout_constraintEnd_toStartOf="@+id/r3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
-
-    <CheckBox
-        android:id="@+id/r3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:text="@string/strCheckMult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
-
     <Button
         android:id="@+id/btn"
         android:layout_width="0dp"
@@ -89,7 +60,7 @@
         android:text="@string/strBtnOperar"
         app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sipnaso"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumber1" />
 
     <TextView
@@ -102,6 +73,14 @@
         app:layout_constraintEnd_toEndOf="@+id/btn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn" />
+
+    <Spinner
+        android:id="@+id/sipnaso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

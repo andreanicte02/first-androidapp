@@ -4,26 +4,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText editTextNumber1;
     EditText editTextNumber2;
-    CheckBox r1;
-    CheckBox r2;
-    CheckBox r3;
-
+    Spinner spinner;
 
 
 
     Button btn;
     TextView textResult;
 
+    //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
     //la primero que pasa cuando se ejecuta o abre una activiad es este metodo es este on create
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,37 +38,38 @@ public class MainActivity extends AppCompatActivity {
         //enlazar los componentes
         editTextNumber1 = findViewById(R.id.editTextNumber1);
         editTextNumber2 = findViewById(R.id.editTextNumber2);
-
-        //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
+        spinner = findViewById(R.id.sipnaso);
         btn = findViewById(R.id.btn);
-        textResult = findViewById(R.id.textViewResultado);
 
-        r1 = findViewById(R.id.r1);
-        r2 = findViewById(R.id.r2);
-        r3 = findViewById(R.id.r3);
+        List<String> opciones = new ArrayList<>();
+        opciones.add("suma");
+        opciones.add("resta");
+        opciones.add("mult");
+
+        //creando un adaptador de string
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,opciones);
+
+        spinner.setAdapter(adapter);
+
+        //otra forma de agregar acciones a los botones
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                operar();
+            }
+        };
+
+        textResult = findViewById(R.id.textViewResultado);
 
 
     }
 
     //de esta manera se pude ejecutar gracias a que acepta un parametro view
 
-    public void operar(View v){
+    public void operar(){
         String cad ="";
-        if(r1.isChecked()){
-            cad+=sumar();
-
-        }
-
-        if(r2.isChecked()){
-            cad+=restar();
-
-        }
-
-        if(r3.isChecked()){
-            cad+=mult();
-
-        }
-        textResult.setText(cad);
+        
 
 
     }
