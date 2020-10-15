@@ -9,12 +9,11 @@
 
     <TextView
         android:id="@+id/textViewNumber1"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="41dp"
         android:layout_marginBottom="164dp"
         android:text="@string/txtLabelNumber1"
-        app:layout_constraintBottom_toTopOf="@+id/groupRadio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -87,10 +86,11 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="59dp"
+        android:onClick="operar"
         android:text="@string/strBtnCalcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,11 +98,11 @@
         app:layout_constraintTop_toBottomOf="@id/groupRadio" />
 
     <TextView
-        android:id="@+id/textResult"
+        android:id="@+id/textViewResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintTop_toBottomOf="@id/button2" />
+        android:text="@string/strResultado"
+        app:layout_constraintTop_toBottomOf="@id/btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
