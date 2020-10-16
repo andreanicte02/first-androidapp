@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         AdapterView.OnItemClickListener itemClikc = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                textResult.setText(opciones.get(position) + "hola");
+                
+                Toast.makeText(MainActivity.this, opciones.get(position), Toast.LENGTH_SHORT).show();
             }
         };
 
