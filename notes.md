@@ -43,3 +43,21 @@ mdpi-> imagenes para dispositvos de gama media
 ```
 
 layout es la distribucion de los elementos en pantalla
+
+
+
+Tipos de resoluciones de imagenes (de menor gama a mayor gama)
+
+- hdpi 75%
+
+- mdpi 100%
+
+- hdpi 150% 
+
+- xhdpi 200%
+
+- xxhdpi 300%
+
+- xxxhdpi 
+
+  (en linux isntalar gimp)
