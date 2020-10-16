@@ -24,5 +24,7 @@ public class AboutActivity extends AppCompatActivity {
                 finish();
             }
         };
+
+        button.setOnClickListener(listener);
     }
 }
