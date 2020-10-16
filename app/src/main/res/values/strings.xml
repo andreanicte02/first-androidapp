@@ -16,4 +16,7 @@
     <string name="strBtnOperar">Button</string>
     <string name="strTextRestultado">Resultado</string>
     <string name="strTextResult">TextView</string>
+    <string name="strAboutButton">About</string>
+    <string name="strTextViewAboutActivity">Andrea Vicente</string>
+    <string name="strBackButtonAboutActivity">back</string>
 </resources>
