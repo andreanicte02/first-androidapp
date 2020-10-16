@@ -2,6 +2,7 @@ package com.example.firstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     TextView textResult;
     ListView listView;
+    Button buttonAbout;
 
     //r es una clase que nunca se debe tocar, aca es donde android guarda en posicioens de memoria las variables
     //la primero que pasa cuando se ejecuta o abre una activiad es este metodo es este on create
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //enlazar los componentes
         textResult = findViewById(R.id.textResult);
         listView = findViewById(R.id.listView);
+        buttonAbout = findViewById(R.id.buttonShowAbout);
 
 
         List<String> opciones = new ArrayList<>();
@@ -63,11 +66,26 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener buttonAboutListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAboutActivity();
+            }
+        };
+
+        buttonAbout.setOnClickListener(buttonAboutListener);
         listView.setOnItemClickListener(itemClikc);
 
 
 
+    }
 
+    private void showAboutActivity(){
+
+        //mostrar una segunda actividad se usan intent
+        Intent i = new Intent(this, AboutActivity.class);
+        //se muestra la segunda actividad
+        startActivity(i);
 
     }
 
