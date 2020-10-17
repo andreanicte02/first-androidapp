@@ -68,3 +68,4 @@ permisos se manejan en el AndroidManifest.xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
+context.MODE_PRIVATE -> solo esa app puede acceder a ese fichero
