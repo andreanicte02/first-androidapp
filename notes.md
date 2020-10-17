@@ -61,3 +61,10 @@ Tipos de resoluciones de imagenes (de menor gama a mayor gama)
 - xxxhdpi 
 
   (en linux isntalar gimp)
+
+permisos se manejan en el AndroidManifest.xml
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
