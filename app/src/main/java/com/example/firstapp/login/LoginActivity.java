@@ -1,4 +1,4 @@
-package com.example.firstapp.Login;
+package com.example.firstapp.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.firstapp.AboutActivity;
 import com.example.firstapp.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -37,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                showAboutActivity();
+                showAboutActivity(user.getText().toString());
 
 
 
@@ -60,10 +59,11 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void showAboutActivity(){
+    private void showAboutActivity(String name){
 
         //mostrar una segunda actividad se usan intent
         Intent i = new Intent(this, WelcomeActivity.class);
+        i.putExtra("userName",name);
         //se muestra la segunda actividad
         startActivity(i);
 
