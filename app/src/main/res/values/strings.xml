@@ -19,4 +19,9 @@
     <string name="strAboutButton">About</string>
     <string name="strTextViewAboutActivity">Andrea Vicente</string>
     <string name="strBackButtonAboutActivity">back</string>
+    <string name="ingrese_una_pagina">Ingrese una pagina</string>
+    <string name="name">Name</string>
+    <string name="find_web_page">find web page</string>
+    <string name="out">out</string>
+    <string name="hola">Hola</string>
 </resources>

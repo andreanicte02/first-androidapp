@@ -67,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         //se muestra la segunda actividad
         startActivity(i);
 
+
     }
 
 }
