@@ -60,6 +60,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         Intent i = new Intent(this,WebActivity.class);
         String direc = editTextViewPage.getText().toString();
+        //enviar inoformacion
         i.putExtra("webName",("https://"+direc));
         startActivity(i);
 
